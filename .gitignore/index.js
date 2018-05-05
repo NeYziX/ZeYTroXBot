@@ -6,9 +6,9 @@ var prefix = (":");
 bot.on('ready', function() {
   bot.user.setGame(":help | Dev By NeYziX");
   console.log("le bot a démarré"); 
-  bot.channels.get('434344990508843011').send("**=======================**");
-  bot.channels.get('434344990508843011').send("| LE BOT VIENT DE SE LANCER |");
-  bot.channels.get('434344990508843011').send("**=======================**");
+  bot.channels.get('441785759804948482').send("**=======================**");
+  bot.channels.get('441785759804948482').send("| LE BOT VIENT DE SE LANCER |");
+  bot.channels.get('441785759804948482').send("**=======================**");
 });
 
 bot.login(process.env.BOT_TOKEN);
@@ -86,7 +86,7 @@ bot.on('message', message => {
             message.author.createDM().then(channel => {
                 channel.send('WORLD!');
             }).catch(console.error);
-        bot.channels.get('434344990508843011').send("Commande §hello utilisée par : " + message.author.username);
+        bot.channels.get('441785759804948482').send("Commande §hello utilisée par : " + message.author.username);
         }
       
         else if(spliteMessage[0] === ":help") {
@@ -94,7 +94,7 @@ bot.on('message', message => {
             message.author.createDM().then(channel => {
                 channel.send('**⇩ Liste des commandes ⇩: \n \n __Bientôt__**');
             }).catch(console.error);
-        bot.channels.get('434344990508843011').send("Commande §help utilisée par : " + message.author.username);
+        bot.channels.get('441785759804948482').send("Commande :help utilisée par : " + message.author.username);
         }             
     }    
 });
@@ -156,13 +156,6 @@ bot.on('message', message => {
         .setColor("0x81DAF5")
     message.channel.sendEmbed(embed)
     }
-});
-
-bot.on('messageReactionAdd', (reaction, user) => {
-    if(reaction.emoji.name === "☺")
-        bot.channels.get('434344990508843011').send("EZ");
-  
-    bot.channels.get('434344990508843011').send("Réaction utilisée : " + reaction.emoji.name);
 });
 
 bot.on("guildMemberAdd", member => {
