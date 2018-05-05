@@ -1,10 +1,10 @@
 const Discord = require('discord.js');
 const bot = new Discord.Client();
 
-var prefix = ("§");
+var prefix = (":");
 
 bot.on('ready', function() {
-  bot.user.setGame("§help | Dev By NeYziX");
+  bot.user.setGame(":help | Dev By NeYziX");
   console.log("le bot a démarré"); 
   bot.channels.get('434344990508843011').send("**=======================**");
   bot.channels.get('434344990508843011').send("| LE BOT VIENT DE SE LANCER |");
@@ -81,7 +81,7 @@ bot.on("message", function(message) {
 bot.on('message', message => {
     if(message.content[0] === prefix) {
         let spliteMessage = message.content.split(' ');
-        if(spliteMessage[0] === "§hello") {
+        if(spliteMessage[0] === ":hello") {
             message.channel.send("world!");
             message.author.createDM().then(channel => {
                 channel.send('WORLD!');
@@ -89,10 +89,10 @@ bot.on('message', message => {
         bot.channels.get('434344990508843011').send("Commande §hello utilisée par : " + message.author.username);
         }
       
-        else if(spliteMessage[0] === "§help") {
+        else if(spliteMessage[0] === ":help") {
             message.channel.send("Liste des commandes envoyées en privée.");
             message.author.createDM().then(channel => {
-                channel.send('**⇩ Liste des commandes ⇩: \n \n __§help :__ \n Pour afficher la liste les commandes \n \n __§info :__ \n Pour afficher les informations du Discord \n \n __§ping :__ \n pour afficher la latence du bot \n \n __§socialmedia | §sm :__ \n Pour afficher les réseaux sociaux de PastelWorld \n \n __§avatar :__ \n Pour voir un avatar en mode GRAND FORMAT \n \n __§créateur :__ \n Pour afficher le site du créateur** \n \n _© NeYziX | Tous droits réservés_');
+                channel.send('**⇩ Liste des commandes ⇩: \n \n __Bientôt__**');
             }).catch(console.error);
         bot.channels.get('434344990508843011').send("Commande §help utilisée par : " + message.author.username);
         }             
