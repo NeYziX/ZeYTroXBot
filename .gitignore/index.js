@@ -97,10 +97,10 @@ bot.on('message', message => {
         bot.channels.get('441785759804948482').send("Commande :help utilisée par : " + message.author.username);
         }
       
-        else if(spliteMessage[0] === ":role") {
+        else if(spliteMessage[0] === ":srole") {
             message.channel.send("Liste des rôles envoyées en privée.");
             message.author.createDM().then(channel => {
-                channel.send('Rôle normaux\nSuper Héros: Personne très actif sur le serveur et qui est sur le serveur depuis trés longtemp.\n#####################################################\nHéros: personne très actif qui a gagner ce grade grâce à un giveaway très spécial grâce à un événement.\n#####################################################\nV.I.P+: personne qui est souvent la et qui a eu ce grade avec un giveaway.\n#####################################################\nV.I.P: personne normal qui a mérité ce grade.\n#####################################################\nPartenaire: quelqu’un d’important sur le serveur qui est en partenariat avec notre serveur.\n#####################################################\ngraphisme: quelqu’un qui aime faire des dessin et qui nous le fais partager sur le serveur.\n#####################################################\nRecruteur: une personne qui a recruté beaucoup de personne sur le serveur.\n#####################################################\nmembre+: personne un peux plus actif qu’un membre.\n#####################################################\nMembre: personne random sur le serveur.');
+                channel.send('Rôle du Staff\n💎 Fondateur 💎\n👑 Administrateur 👑\n💼 Modérateur 💼\n💼 Modérateur-Test 💼\n🎩 Helpeur 🎩\n🛡️ Développeur 🛡️');
             }).catch(console.error);
         bot.channels.get('441785759804948482').send("Commande :role utilisée par : " + message.author.username);
         }  
