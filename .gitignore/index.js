@@ -74,17 +74,7 @@ bot.on("message", function(message) {
                     .then(function(list){
                         message.channel.bulkDelete(list);
                 }, function(err){message.channel.send("Erreur")})}
-            break;
-            case "annonce":
-            let args = message.content.split(" ").slice(1);
-            let tte = args.join(" ")
-            if (!tte){
-            return message.reply("Merci de poser une question :8ball:")};
-            var bembed = new Discord.RichEmbed()
-            .setTitle("Nouvelle annonce")
-            .addField("«»«»«»«»«»", tte)
-            message.channel.sendEmbed(bembed)
-            break;
+            break;          
     }});
 
 bot.on('message', message => {
@@ -112,7 +102,19 @@ bot.on('message', message => {
                 channel.send('Rôle du Staff\n💎 Fondateur 💎\n👑 Administrateur 👑\n💼 Modérateur 💼\n💼 Modérateur-Test 💼\n🎩 Helpeur 🎩\n🛡️ Développeur 🛡️');
             }).catch(console.error);
         bot.channels.get('441785759804948482').send("Commande :role utilisée par : " + message.author.username);
-        }  
+        } 
+      
+        else if(spliteMessage[0] === ":hhelp") {
+            message.channel.send("Liste des commandes envoyées en privée.");
+            message.author.createDM().then(channel => {
+                            var bembed = new Discord.RichEmbed()
+            .setDescription(":8ball: 8ball")
+            .addField("Question :thinking:", tte)
+            .addField("Réponse :kissing_heart:", reponse)
+            message.channel.sendEmbed(bembed)
+            }).catch(console.error);
+        bot.channels.get('441785759804948482').send("Commande :help utilisée par : " + message.author.username);
+        }
     }    
 });
 
