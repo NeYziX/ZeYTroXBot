@@ -75,6 +75,25 @@ bot.on("message", function(message) {
                         message.channel.bulkDelete(list);
                 }, function(err){message.channel.send("Erreur")})}
             break;
+                case "annonce":
+        let args = message.content.split(" ").slice(1);
+        let tte = args.join(" ")
+        if (!tte){
+            return message.reply("Merci de poser une question :8ball:")};
+        
+            var replys = [
+                "Oui",
+                "Non",
+                "Je sais pas",
+                "Peut-être"
+            ];
+        
+            let reponse = (replys[Math.floor(Math.random() * replys.length)])
+            var bembed = new Discord.RichEmbed()
+            .setTitle("Nouvelle annonce")
+            .setDescription(tte)
+            message.channel.sendEmbed(bembed)
+            break;
         
     }});
 
