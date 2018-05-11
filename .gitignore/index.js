@@ -103,18 +103,6 @@ bot.on('message', message => {
             }).catch(console.error);
         bot.channels.get('441785759804948482').send("Commande :role utilisée par : " + message.author.username);
         } 
-      
-        else if(spliteMessage[0] === ":hhelp") {
-            message.channel.send("Liste des commandes envoyées en privée.");
-            message.author.createDM().then(channel => {
-                            var bembed = new Discord.RichEmbed()
-            .setDescription(":8ball: 8ball")
-            .addField("Question :thinking:", "tot")
-            .addField("Réponse :kissing_heart:", "tot)
-            message.channel.sendEmbed(bembed)
-            }).catch(console.error);
-        bot.channels.get('441785759804948482').send("Commande :help utilisée par : " + message.author.username);
-        }
     }    
 });
 
