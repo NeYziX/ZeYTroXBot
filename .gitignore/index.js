@@ -109,8 +109,8 @@ bot.on('message', message => {
             message.author.createDM().then(channel => {
                             var bembed = new Discord.RichEmbed()
             .setDescription(":8ball: 8ball")
-            .addField("Question :thinking:", tte)
-            .addField("Réponse :kissing_heart:", reponse)
+            .addField("Question :thinking:", "tot")
+            .addField("Réponse :kissing_heart:", "tot)
             message.channel.sendEmbed(bembed)
             }).catch(console.error);
         bot.channels.get('441785759804948482').send("Commande :help utilisée par : " + message.author.username);
